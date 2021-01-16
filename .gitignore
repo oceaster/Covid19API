@@ -1,0 +1,10 @@
+
+# TEMP
+__pycache__
+
+# BUILD
+
+# PRODUCTION
+.dbsqlite
+
+# MISC
