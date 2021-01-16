@@ -1,10 +1,7 @@
 
-# TEMP
+# CACHE
 __pycache__
+.pytest_cache
 
-# BUILD
-
-# PRODUCTION
-.dbsqlite
-
-# MISC
+# DATABASE
+db.sqlite3
