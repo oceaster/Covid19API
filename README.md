@@ -43,7 +43,7 @@ Your API must take the following fields as input:
 
 # Install & Setup
 
-Using python 3.8 install the dependencies using the virtual enviroment
+With python 3.8 install the dependencies using the virtual enviroment
 
 ```bash
 python -m pipenv install
@@ -74,7 +74,7 @@ python -m pipenv shell
 ```
 
 By default the server will be hosted on <b>http://localhost:8000/</b><br/>
-and can be started by running the following command line
+and can be started by running the following command line within the shell.
 
 ```bash
 ./manage.py runserver
