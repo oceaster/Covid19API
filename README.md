@@ -63,6 +63,13 @@ or if you have multiple versions of python installed you might need
 python38 -m pipenv install
 ```
 
+You should also make sure to have the dev dependencies if you wish to use the
+auto deploy method.
+
+```bash
+python38 -m pipenv install --dev
+```
+
 The required depenencies are as follows
 
 1. Django 2.2.11
