@@ -1,0 +1,71 @@
+
+#App-form {
+    display: flex;
+    min-height: 520px;
+    height: 78vmin;
+    max-width: 450px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin: 32px auto 32px auto;
+    border-radius: 8px;
+    border: 1px solid rgba(.1,.1,.1,.5);
+}
+
+#result-section {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+    margin: 10vmin 0 10vmin 0;
+}
+
+.result-img {
+    width: 25vmin;
+    height: 25vmin;
+    margin-bottom: 32px;
+    pointer-events: none;
+}
+
+.result-img-loading {
+    width: 25vmin;
+    height: 25vmin;
+    margin-bottom: 32px;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .result-img-loading {
+        animation: loading-spin infinite 20s linear;
+    }
+}
+
+#result-pass {
+    text-align: center;
+    color: whitesmoke;
+    font-size: calc(16px + 2vmin);
+}
+
+#result-warnings {
+    display: block;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    max-width: 340px;
+    font-size: calc(9px + 1vmin);
+    color: red;
+}
+
+@keyframes loading-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

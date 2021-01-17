@@ -1,10 +1,10 @@
 
-# Covid19 API
+# COVID-19 REST API
 
 ## Quick Guide
 
-1. Refer to requirements
-2. Refer to install & setup
+1. Refer to Requirements
+2. Refer to Install & Setup
 3. Refer to Auto Deployment
 
 ## Challenge Summary
@@ -160,4 +160,9 @@ and can be started by running the following command line within the shell.
 python ./manage.py runserver
 ```
 
-<p align='center'> By Owen Cameron Easter 16/JAN/2021 </p>
+<br/>
+<br/>
+<p align='center'> By </p>
+<p align='center'> Owen Cameron Easter </p>
+<p align='center'> For </p>
+<p align='center'> <a href='https://profusion.com/'> ProFusion </a> </p>

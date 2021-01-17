@@ -7,11 +7,12 @@ name = "pypi"
 django = "==2.2.11"
 djangorestframework = "*"
 django-cors-headers = "*"
+requests = "*"
+pytest = "*"
+pytest-django = "*"
 
 [dev-packages]
 pylint = "*"
-pytest = "*"
-pytest-django = "*"
 
 [requires]
 python_version = "3.8"

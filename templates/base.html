@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" href="/static/css/base.css">
+
+        <!-- Imported Stylesheet Files -->
+        {% block styles %}{% endblock styles %}
+        <!-- ------------------------- -->
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Can I Travel?</title>
+    </head>
+
+    <body>
+        {% block content %}{% endblock content %}
+    </body>
+
+    <footer>
+        <div class='footer-section'>
+            <p>Technical Assessment for&nbsp;</p>
+            <a
+                href='https://profusion.com/'
+                class='link'
+            ><code> Profusion&nbsp; </code></a>
+            </div>
+        <div class='footer-section'>
+            <p> By&nbsp; </p>
+            <a
+                href='https://github.com/oceaster'
+                class='link'
+            ><code> Owen Cameron Easter </code></a>
+        </div>
+    </footer>
+
+    <script src='/static/js/base.js'></script>
+
+    <!-- Imported Javascript Files -->
+    {% block scripts %}{% endblock scripts %}
+    <!-- ------------------------- -->
+
+</html>

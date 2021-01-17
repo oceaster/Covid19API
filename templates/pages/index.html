@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+
+{% block styles %}
+    <link rel="stylesheet" href="/static/css/pages/index.css">
+{% endblock styles %}
+
+
+{% block scripts %}
+    <script src='/static/js/library/moment.js'></script>
+    <script src='/static/js/pages/index.js'></script>
+{% endblock scripts %}
+
+
+{% block content %}
+
+    <h1> Can I Travel? </h1>
+
+    <form
+        id="App-form"
+        onsubmit='event.preventDefault(); onTravelFormSubmit();'
+    >
+        <label for='travel-date'> Date of Travel </label>
+        <input id='travel-date' type='date' required />
+
+        <label for='return-date'> Date of Return </label>
+        <input id='return-date' type='date' />
+
+        <label for='age'> Age (Years old) </label>
+        <input id='age' type='number' required />
+
+        <label for="origin-country">Location</label>
+        <select id="origin-country" name="origin" required>
+            {% include "assets/countryList.html" %}
+        </select>
+
+        <label for="destination">Destination</label>
+        <select id="destination" name="destination" required>
+            {% include "assets/countryList.html" %}
+        </select>
+
+        <button type='submit'> check status </button>
+    </form>
+
+    <div id='result-section'>
+        <img
+            id='result-img'
+            src='/static/media/decline.svg'
+        />
+        <div id='result-text'>
+        </div>
+        <div id='result-warnings'>
+        </div>
+    </div>
+
+{% endblock content %}
+
