@@ -100,5 +100,5 @@ CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:8000',
     'http://127.0.0.1:8000',
-    'eastercompany.eu.pythonanywhere.com'
+    'https://eastercompany.eu.pythonanywhere.com'
 )
