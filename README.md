@@ -139,7 +139,7 @@ By default the server will be hosted on <b>http://localhost:8000/</b><br/>
 and can be started by running the following command line within the shell.
 
 ```bash
-./manage.py start
+python ./manage.py start
 ```
 
 ## Manual Deployment
