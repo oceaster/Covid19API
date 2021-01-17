@@ -8,7 +8,7 @@ This build is currently untested on Windows or Mac systems.<br/>
 Linux (Ubuntu 20.1+) confirmation only.
 <br/>
 <br/>
-Refer: where `python` bash cmd is used you require `python3` or `python38`
+Refer: where `python` bash cmd is used you may require `python3` or `python38`
 
 ```bash
 >> python
@@ -25,7 +25,7 @@ or
 If you haven't already - you will require pipenv to automatically install dependencies
 
 ```bash
->> python -m pip install pipenv
+python -m pip install pipenv
 ```
 ## Quick Guide
 
