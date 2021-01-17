@@ -7,7 +7,11 @@ SECRET_KEY = SECRET_FILE.read()
 SECRET_FILE.close()
 
 DEBUG = True
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = [
+    '127.0.0.1',
+    'localhost',
+    'eastercompany.eu.pythonanywhere.com'
+]
 
 INSTALLED_APPS = [
     # django default
@@ -95,7 +99,6 @@ STATICFILES_DIRS = (
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ORIGIN_WHITELIST = (
     'http://localhost:8000',
-    'http://localhost:8100',
     'http://127.0.0.1:8000',
-    'http://127.0.0.1:8100'
+    'eastercompany.eu.pythonanywhere.com'
 )

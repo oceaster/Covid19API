@@ -1,5 +1,8 @@
 
-# COVID-19 REST API
+# COVID-19 Travel App
+
+View the app in action here
+[eastercompany.eu.pythonanywhere.com](http://eastercompany.eu.pythonanywhere.com/)
 
 ## Quick Guide
 
@@ -63,11 +66,10 @@ or if you have multiple versions of python installed you might need
 python38 -m pipenv install
 ```
 
-You should also make sure to have the dev dependencies if you wish to use the
-auto deploy method.
+you may wish to install dev dependencies if you intend of modifying this build
 
 ```bash
-python38 -m pipenv install --dev
+python -m pipenv install -d
 ```
 
 The required depenencies are as follows
@@ -78,9 +80,13 @@ The required depenencies are as follows
 4. PyTest
 5. PyTest-Django
 
-The additional dev dependencies; although they are not required.
+The additional dev dependencies; which are not required.
 
 1. Pylint
+
+We use PyTest as a required dependency as this tests API status and functionality
+of which this app is dependent on - unit tests are run automatically by the auto-deploy
+method listed below in the deployment section.
 
 ## Testing
 
