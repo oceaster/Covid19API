@@ -95,7 +95,6 @@ const validateDestination = async () => {
         res => {
             res.json().then(
                 data => {
-                    console.log(data);
                     if (data[loc] < data[des] && eligibility) {
                         return goodResult();
                     } else {
