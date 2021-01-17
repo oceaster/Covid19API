@@ -2,25 +2,31 @@
 # COVID-19 Travel App
 
 View the app in action here
-[eastercompany.eu.pythonanywhere.com](http://eastercompany.eu.pythonanywhere.com/) <br/>
-
-This build is currently untested on Windows or Mac systems. <br/>
-Linux (Ubuntu 20.1+) confirmation only. <br/>
+[eastercompany.eu.pythonanywhere.com](http://eastercompany.eu.pythonanywhere.com/)
 <br/>
-Refer: where python cmd is used you require python3 or python38
+This build is currently untested on Windows or Mac systems.<br/>
+Linux (Ubuntu 20.1+) confirmation only.
+<br/>
+<br/>
+Refer: where `python` bash cmd is used you require `python3` or `python38`
 
 ```bash
 >> python
 ```
-
+or
 ```bash
 >> python3
 ```
-
+or
 ```bash
 >> python38
 ```
 
+If you haven't already - you will require pipenv to automatically install dependencies
+
+```bash
+>> python -m pip install pipenv
+```
 ## Quick Guide
 
 1. Refer to Requirements
@@ -71,16 +77,10 @@ Your API must take the following fields as input:
 
 ## Install & Setup
 
-With python 3.8 install the dependencies using the virtual enviroment
+With python 3.8; install the dependencies using the virtual enviroment
 
 ```bash
 python -m pipenv install
-```
-
-or if you have multiple versions of python installed you might need
-
-```bash
-python38 -m pipenv install
 ```
 
 you may wish to install dev dependencies if you intend of modifying this build
