@@ -57,8 +57,11 @@ const validateDateOfReturn = () => {
 
     if (!dateOfReturnEl.value)
         return true;
-    if (dateOfReturn < dateOfTravel)
+
+    if (dateOfReturn < dateOfTravel) {
         addWarning('Date of return must be later than date of travel');
+        return false;
+    }
 
     if (dateOfReturn < maximumDate)
         return true;
