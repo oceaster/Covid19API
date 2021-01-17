@@ -2,7 +2,24 @@
 # COVID-19 Travel App
 
 View the app in action here
-[eastercompany.eu.pythonanywhere.com](http://eastercompany.eu.pythonanywhere.com/)
+[eastercompany.eu.pythonanywhere.com](http://eastercompany.eu.pythonanywhere.com/) <br/>
+
+This build is currently untested on Windows or Mac systems. <br/>
+Linux (Ubuntu 20.1+) confirmation only. <br/>
+<br/>
+Refer: where python cmd is used you require python3 or python38
+
+```bash
+>> python
+```
+
+```bash
+>> python3
+```
+
+```bash
+>> python38
+```
 
 ## Quick Guide
 
