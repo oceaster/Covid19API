@@ -98,12 +98,12 @@ const validateDestination = async () => {
                     console.log(data);
                     if (data[loc] < data[des] && eligibility) {
                         return goodResult();
-                    } else if (data[loc] < data[des]) {
-                        return badResult();
                     } else {
-                        addWarning(`Your current location is forbidden
-                            from traveling to your selected destination`
-                        );
+                        if (data[loc] >= data[des]) {
+                            addWarning(`Your current location is forbidden
+                                from traveling to your selected destination`
+                            );
+                        }
                         return badResult();
                     }
                 }
