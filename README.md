@@ -75,12 +75,12 @@ The required depenencies are as follows
 1. Django 2.2.11
 2. Django-rest-framework
 3. Django-cors-headers
+4. PyTest
+5. PyTest-Django
 
 The additional dev dependencies; although they are not required.
 
 1. Pylint
-2. PyTest
-3. PyTest-Django
 
 ## Testing
 
