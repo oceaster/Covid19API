@@ -219,19 +219,20 @@ To recieve a response in JSON with boolean status for each condition and warning
 on failures or conditional circumstances use this endpoint with 'return_date' as
 an optional field.
 
-```
-DOMAIN / api / permit / <location> / <destination> / <age> / <travel_date> / <return_date>
-```
+<br/>
+`/api/permit/<location>/<destination>/<age>/<travel_date>/<return_date>`
 
-an example input would be as follows:
+<br/>
+an example input would be as follows: <br/>
 
-```
-/api/permit/united-kingdom/united-states/18/2021-1-23/2021-1-25
-```
+<br/>
+`/api/permit/united-kingdom/united-states/18/2021-1-23/2021-1-25` <br/>
 
+<br/>
 an example response would be as follows:
+<br/>
 
-```
+```JSON
 {
     "travel_date": true,
     "return_date": true,
@@ -241,6 +242,7 @@ an example response would be as follows:
 }
 ```
 
+<br/>
 `travel_date` confirms travel date is within 2-5 workings days. <br/>
 `return_date` confirms return date is within 2 months if applicable. <br/>
 `age` returns applicable travel age (21+) or (15+ with a warning atached). <br/>
