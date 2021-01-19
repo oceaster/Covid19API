@@ -183,14 +183,14 @@ and can be started by running the following command line within the shell.
 python ./manage.py runserver
 ```
 
-# API INPUT / OUTPUT
+# API Input / Output
 
 To recieve a response in JSON with boolean status for each condition and warnings
 on failures or conditional circumstances use this endpoint with 'return_date' as
 an optional field.
 
 ```
-api/permit/ <location> / <destination> / <age> / <travel_date> / <return_date>
+DOMAIN / api / permit / <location> / <destination> / <age> / <travel_date> / <return_date>
 ```
 
 an example input would be as follows:
@@ -210,6 +210,15 @@ an example response would be as follows:
     "warnings": ["must travel with adult"]
 }
 ```
+
+`travel_date` confirms travel date is within 2-5 workings days. <br/>
+`return_date` confirms return date is within 2 months if applicable. <br/>
+`age` returns applicable travel age (21+) or (15+ with a warning atached). <br/>
+`loc_to_des` as in location to destination confirms loc cases are lower than des cases.
+<br/>
+`warnings` contains any information on failures or extra information such as when a user
+is between the age of 15 and 21 and can travel only if supervised by an adult.
+
 
 <br/>
 <br/>
