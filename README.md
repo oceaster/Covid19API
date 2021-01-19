@@ -210,7 +210,7 @@ The application interface and response is quite simple; yet effective.
     </tr>
 </table>
 
-you can view this application is production by
+you can view this application in production by
 [clicking here!](https://eastercompany.eu.pythonanywhere.com/)
 
 # API Input / Output
