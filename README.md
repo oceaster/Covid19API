@@ -1,27 +1,14 @@
 
 # COVID-19 Travel App
 
-View the app in action here
-[eastercompany.eu.pythonanywhere.com](http://eastercompany.eu.pythonanywhere.com/)
+View the app in action here <br/>
+http://eastercompany.eu.pythonanywhere.com/ <br/>
 <br/>
-This build is currently untested on Windows or Mac systems.<br/>
+This build is currently untested on Windows or Mac systems. <br/>
 Linux (Ubuntu 20.1+) confirmation only.
 <br/>
 <br/>
-Refer: where `python` bash cmd is used you may require `python3` or `python38`
-
-```bash
->> python
-```
-or
-```bash
->> python3
-```
-or
-```bash
->> python38
-```
-
+Refer: where `python` bash cmd is used you may require `python3` or `python38` <br/>
 If you haven't already - you will require pipenv to automatically install dependencies
 
 ```bash
@@ -32,6 +19,8 @@ python -m pip install pipenv
 1. Refer to Requirements
 2. Refer to Install & Setup
 3. Refer to Auto Deployment
+4. Check the app interface section
+5. Check the api input / output section
 
 ## Challenge Summary
 
@@ -262,10 +251,10 @@ is between the age of 15 and 21 and can travel only if supervised by an adult.
 <br/>
 
 You can interact with this api on this URL:<br/>
-`https://eastercompany.eu.pythonanywhere.com`<br/>
+https://eastercompany.eu.pythonanywhere.com<br/>
 <br/>
 Here is an example query you can sample.<br/>
-`https://eastercompany.eu.pythonanywhere.com/api/permit/united-kingdom/united-states/18/2021-1-23/2021-1-25`<br/>
+https://eastercompany.eu.pythonanywhere.com/api/permit/united-kingdom/united-states/18/2021-1-23/2021-1-25<br/>
 
 <br/>
 <br/>
