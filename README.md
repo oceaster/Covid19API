@@ -80,7 +80,7 @@ python -m pipenv install -d
 
 The required depenencies are as follows
 
-1. Django 2.2.11
+1. Django 2.2.13
 2. Django-rest-framework
 3. Django-cors-headers
 4. PyTest
@@ -128,7 +128,7 @@ By default the server will be hosted on <b>http://localhost:8000/</b><br/>
 and can be started by running the following command line within the shell.
 
 ```bash
-python ./manage.py start
+python manage.py start
 ```
 
 ## Manual Deployment
@@ -150,13 +150,13 @@ python -m pipenv shell
 First you will need to build the database
 
 ```bash
-python ./manage.py makemigrations
+python manage.py makemigrations
 ```
 
 then apply migrations
 
 ```bash
-python ./manage.py migrate
+python manage.py migrate
 ```
 
 test that the database and api are communicating appropriately
@@ -169,7 +169,7 @@ By default the server will be hosted on <b>http://localhost:8000/</b><br/>
 and can be started by running the following command line within the shell.
 
 ```bash
-python ./manage.py runserver
+python manage.py runserver
 ```
 
 # WebApp Interface
@@ -259,6 +259,6 @@ https://eastercompany.eu.pythonanywhere.com/api/permit/united-kingdom/united-sta
 <br/>
 <br/>
 <p align='center'> By </p>
-<p align='center'> Owen Cameron Easter </p>
+<p align='center'> <a href='https://github.com/oceaster'> Owen Cameron Easter </a> </p>
 <p align='center'> For </p>
 <p align='center'> <a href='https://profusion.com/'> ProFusion </a> </p>
