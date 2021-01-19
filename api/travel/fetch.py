@@ -104,7 +104,7 @@ def permit(loc, des, age, trv, rtn=None):
         resp['travel_date'] = False
 
     # RETURN DATE CONDITION CHECK
-    if min_return_date <= rtn <= max_return_date:
+    if min_return_date <= rtn <= max_return_date or rtn is None:
         resp['return_date'] = True
     else:
         warn.append('date of return must be within 2 months')
