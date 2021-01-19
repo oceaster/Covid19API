@@ -183,6 +183,47 @@ and can be started by running the following command line within the shell.
 python ./manage.py runserver
 ```
 
+# WebApp Interface
+
+The application interface and response is quite simple; yet effective.
+
+<table>
+    <tr>
+        <th> Good Input Example </th>
+        <th> Good Result Example (no warning)</th>
+    </tr>
+    <tr>
+        <td>
+            <img width='200px' height='300px'
+                src="https://scontent-lhr8-2.xx.fbcdn.net/v/t1.15752-9/140176419_414878859847596_3289243424905538988_n.png?_nc_cat=105&ccb=2&_nc_sid=ae9488&_nc_ohc=TQ5NJBb8DeUAX9Hfmcl&_nc_ht=scontent-lhr8-2.xx&oh=4d8ee57a3c8208833ea9b11a1bbb8e77&oe=602E6337">
+        </td>
+        <td>
+            <img width='200px' height='300px'
+                src="https://scontent-lhr8-1.xx.fbcdn.net/v/t1.15752-9/140184718_160323795614996_2106851009253124471_n.png?_nc_cat=111&ccb=2&_nc_sid=ae9488&_nc_ohc=KiWgh-JSidgAX_SwLWb&_nc_ht=scontent-lhr8-1.xx&oh=4abf7faaed49969b705ae9c92739fa9e&oe=602C4C1F">
+        </td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th> Bad Input Example </th>
+        <th> Bad Result Example </th>
+    </tr>
+    <tr>
+        <td>
+            <img width='200px' height='320px'
+                src="https://scontent-lht6-1.xx.fbcdn.net/v/t1.15752-9/140265205_1044085446077142_6026951136860547900_n.png?_nc_cat=103&ccb=2&_nc_sid=ae9488&_nc_ohc=ZrPC0RYswtcAX_H-iDB&_nc_oc=AQkQ3nq8AuiCOGjsK5Sd0_t8hS2GqPOQHm3JNqIx5ujf2Vty3VhQfIDfJGi8MuzGx-Y&_nc_ht=scontent-lht6-1.xx&oh=51e531bd75f17fe6f2e7b83b0e98db80&oe=602DF2C0">
+        </td>
+        <td>
+            <img width='200px' height='320px'
+                src="https://scontent-lhr8-2.xx.fbcdn.net/v/t1.15752-9/140197409_778329102767712_3269018544921037580_n.png?_nc_cat=102&ccb=2&_nc_sid=ae9488&_nc_ohc=7BCyih1NQ1AAX8dxuQQ&_nc_ht=scontent-lhr8-2.xx&oh=63a3bf3431f0ecbed4e8d0ae75c8bfbc&oe=602AE9AE">
+        </td>
+    </tr>
+</table>
+
+you can view this application is production by
+(clicking here!)[https://eastercompany.eu.pythonanywhere.com/]
+
 # API Input / Output
 
 To recieve a response in JSON with boolean status for each condition and warnings
@@ -218,7 +259,13 @@ an example response would be as follows:
 <br/>
 `warnings` contains any information on failures or extra information such as when a user
 is between the age of 15 and 21 and can travel only if supervised by an adult.
+<br/>
 
+You can interact with this api on this URL:<br/>
+`https://eastercompany.eu.pythonanywhere.com`<br/>
+<br/>
+Here is an example query you can sample.<br/>
+`https://eastercompany.eu.pythonanywhere.com/api/permit/united-kingdom/united-states/18/2021-1-23/2021-1-25`<br/>
 
 <br/>
 <br/>
