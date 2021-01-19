@@ -248,7 +248,7 @@ an example response would be as follows:
 `warnings` contains any information on failures or extra information such as when a user
 is between the age of 15 and 21 and can travel only if supervised by an adult.
 <br/>
-
+<br/>
 You can interact with this api on this URL:<br/>
 https://eastercompany.eu.pythonanywhere.com<br/>
 <br/>
