@@ -190,7 +190,7 @@ The application interface and response is quite simple; yet effective.
 <table>
     <tr>
         <th> Good Input Example </th>
-        <th> Good Result Example (no warning)</th>
+        <th> Good Result Example </th>
     </tr>
     <tr>
         <td>
