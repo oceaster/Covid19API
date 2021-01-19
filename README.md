@@ -218,16 +218,13 @@ you can view this application in production by
 To recieve a response in JSON with boolean status for each condition and warnings
 on failures or conditional circumstances use this endpoint with 'return_date' as
 an optional field.
-
 <br/>
-`/api/permit/<location>/<destination>/<age>/<travel_date>/<return_date>`
-
+`/api/permit/ :location: / :destination: / :age: / :travel_date: / :return_date:`
+<br/>
 <br/>
 an example input would be as follows: <br/>
-
 <br/>
 `/api/permit/united-kingdom/united-states/18/2021-1-23/2021-1-25` <br/>
-
 <br/>
 an example response would be as follows:
 <br/>
