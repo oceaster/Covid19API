@@ -1,5 +1,5 @@
 from requests import request
-from datetime import datetime, timedelta
+from datetime import date, datetime, timedelta
 
 
 def case_data(country):
@@ -89,12 +89,15 @@ def compare(location, destination):
 
 
 def permit(loc, des, age, trv, rtn=None):
+    age = int(age)
+    trv = datetime.strptime(trv, '%Y-%m-%d')
+    rtn = datetime.strptime(rtn, '%Y-%m-%d')
     resp = {}
     warn = []
-    min_travel_date = (datetime.now() - timedelta(-2)).strftime('%Y-%m-%d')
-    max_travel_date = (datetime.now() - timedelta(-5)).strftime('%Y-%m-%d')
-    min_return_date = (datetime.now() - timedelta(-2)).strftime('%Y-%m-%d')
-    max_return_date = (datetime.now() - timedelta(-60)).strftime('%Y-%m-%d')
+    min_travel_date = datetime.now() - timedelta(-2)
+    max_travel_date = datetime.now() - timedelta(-5)
+    min_return_date = datetime.now() - timedelta(-2)
+    max_return_date = datetime.now() - timedelta(-60)
 
     # TRAVEL DATE CONDITION CHECK
     if min_travel_date <= trv <= max_travel_date:
@@ -123,7 +126,7 @@ def permit(loc, des, age, trv, rtn=None):
 
     # LOC/DES CONDITION CHECK
     case_data = compare(loc, des)
-    if case_data[0] <= case_data[1]:
+    if case_data[loc] <= case_data[des]:
         resp['loc_to_des'] = True
     else:
         warn.append('location case data is higher than destination case data')
