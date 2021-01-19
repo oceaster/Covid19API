@@ -240,13 +240,19 @@ an example response would be as follows:
 ```
 
 <br/>
-`travel_date` confirms travel date is within 2-5 workings days. <br/>
-`return_date` confirms return date is within 2 months if applicable. <br/>
-`age` returns applicable travel age (21+) or (15+ with a warning atached). <br/>
-`loc_to_des` as in location to destination confirms loc cases are lower than des cases.
 <br/>
+
+`travel_date` confirms travel date is within 2-5 workings days. <br/>
+
+`return_date` confirms return date is within 2 months if applicable. <br/>
+
+`age` returns applicable travel age (21+) or (15+ with a warning atached). <br/>
+
+`loc_to_des` as in location to destination confirms loc cases are lower than des cases. <br/>
+
 `warnings` contains any information on failures or extra information such as when a user
 is between the age of 15 and 21 and can travel only if supervised by an adult.
+
 <br/>
 <br/>
 You can interact with this api on this URL:<br/>
