@@ -41,10 +41,10 @@ const validateDateOfTravel = () => {
     const maximumDate = moment().add(5, 'days');
     const dateOfTravel = moment(dateOfTravelEl.value);
 
-    if (minimumDate < dateOfTravel && maximumDate > dateOfTravel)
+    if (minimumDate <= dateOfTravel && maximumDate >= dateOfTravel)
         return true;
     else
-        addWarning('Date of travel must be between the next 2-5 working days.');
+        addWarning('Date of travel must be within the next 2-5 working days.');
 
     return false;
 };
