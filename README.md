@@ -222,7 +222,7 @@ The application interface and response is quite simple; yet effective.
 </table>
 
 you can view this application is production by
-(clicking here!)[https://eastercompany.eu.pythonanywhere.com/]
+[clicking here!](https://eastercompany.eu.pythonanywhere.com/)
 
 # API Input / Output
 
