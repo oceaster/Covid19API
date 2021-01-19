@@ -32,7 +32,7 @@ def test_data_request():
 
 
 def test_data():
-    state = fetch.approval(UK_name, US_name)
+    state = fetch.compare(UK_name, US_name)
     assert state[UK_name] >= 0
     assert state[US_name] >= 0
     assert state[UK_name] < state[US_name] or state[UK_name] > state[US_name]

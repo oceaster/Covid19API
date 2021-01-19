@@ -48,7 +48,10 @@ def _loc_dest_data_(location, destination):
 
 def compare(location, destination):
     '''
-    Compares the data of location & destination data sets
+    Compares the data of location & destination data sets.
+    While making sure that data gathered for a country is
+    from the latest available date - not considering time.
+    When no data can match the requirements 0 is returned.
 
     Parameters:
         data (dict/json): containing 'location' & 'destination' keys
@@ -84,3 +87,48 @@ def compare(location, destination):
 
     return case
 
+
+def permit(loc, des, age, trv, rtn=None):
+    resp = {}
+    warn = []
+    min_travel_date = (datetime.now() - timedelta(-2)).strftime('%Y-%m-%d')
+    max_travel_date = (datetime.now() - timedelta(-5)).strftime('%Y-%m-%d')
+    min_return_date = (datetime.now() - timedelta(-2)).strftime('%Y-%m-%d')
+    max_return_date = (datetime.now() - timedelta(-60)).strftime('%Y-%m-%d')
+
+    # TRAVEL DATE CONDITION CHECK
+    if min_travel_date <= trv <= max_travel_date:
+        resp['travel_date'] = True
+    else:
+        warn.append('date of travel must be within 2-5 working days')
+        resp['travel_date'] = False
+
+    # RETURN DATE CONDITION CHECK
+    if min_return_date <= rtn <= max_return_date:
+        resp['return_date'] = True
+    else:
+        warn.append('date of return must be within 2 months')
+        resp['return_date'] = False
+
+    # AGE CONDITION CHECK
+    if age < 21:
+        if age >= 15:
+            resp['age'] = True
+            warn.append('must travel with adult')
+        else:
+            resp['age'] = False
+            warn.append('too young to travel')
+    else:
+        resp['age'] = True
+
+    # LOC/DES CONDITION CHECK
+    case_data = compare(loc, des)
+    if case_data[0] <= case_data[1]:
+        resp['loc_to_des'] = True
+    else:
+        warn.append('location case data is higher than destination case data')
+        resp['loc_to_des'] = False
+
+    # JSON RESPONSE
+    resp['warnings'] = warn
+    return resp
