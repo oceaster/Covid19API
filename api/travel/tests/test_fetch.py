@@ -1,6 +1,5 @@
 # LOCAL APP IMPORTS
 from api.travel import fetch
-from datetime import datetime, timedelta
 
 UK_name = 'United Kingdom'
 UK_data = None
