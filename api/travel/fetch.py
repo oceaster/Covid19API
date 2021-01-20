@@ -130,6 +130,12 @@ def permit(loc, des, age, trv, rtn=None):
 
     # LOC/DES CONDITION CHECK
     case_data = compare(loc, des)
+
+    if case_data[loc] == 0:
+        warn.append('no case data available for your current location')
+    if case_data[des] == 0:
+        warn.append('no case data available for your selected destination')
+
     if case_data[loc] <= case_data[des]:
         resp['loc_to_des'] = True
     else:
