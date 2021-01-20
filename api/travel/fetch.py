@@ -1,5 +1,5 @@
 from requests import request
-from datetime import date, datetime, timedelta
+from datetime import datetime, timedelta
 
 
 def case_data(country):
@@ -63,26 +63,30 @@ def compare(location, destination):
     '''
     data = _loc_dest_data_(location, destination)
 
+    # MOST RECENT DATE FOR DATA ON LOC/DES
     if len(data[location]) > 0:
-        d1 = data[location][-1]['Date'].split('T')[0]
+        loc_date = data[location][-1]['Date'].split('T')[0]
     else:
-        d1 = (datetime.now() - timedelta(1)).strftime('%Y-%m-%d')
-    if len(data[destination]) > 0:
-        d2 = data[destination][-1]['Date'].split('T')[0]
-    else:
-        d2 = d1
+        loc_date = (datetime.now() - timedelta(1)).strftime('%Y-%m-%d')
 
+    if len(data[destination]) > 0:
+        des_date = data[destination][-1]['Date'].split('T')[0]
+    else:
+        des_date = loc_date
+
+    # CREATE DEFAULT CASE DATA
     case = {
         location: 0,
         destination: 0
     }
 
+    # ITERATE DATES FOR MOST RECENT DATE
     for dat in data[location]:
-        if dat["Date"].split('T')[0] == d1:
+        if dat["Date"].split('T')[0] == loc_date:
             case[location] += dat["Active"]
 
     for dat in data[destination]:
-        if dat["Date"].split('T')[0] == d2:
+        if dat["Date"].split('T')[0] == des_date:
             case[destination] += dat["Active"]
 
     return case
